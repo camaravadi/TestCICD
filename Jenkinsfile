@@ -11,9 +11,9 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Run avg.py') {
+        stage('Run avg2.py') {
             steps {
-                sh 'python version2/app/avg2.py'
+                sh 'python app/avg2.py'
             }
         }
     }
