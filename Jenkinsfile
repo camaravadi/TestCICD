@@ -16,6 +16,11 @@ pipeline {
             }
         }
         stage('Run avg2.py') {
+            agent {
+                docker {
+                    image 'python:3.10'
+                }
+            }
             steps {
                 sh 'python app/avg2.py'
             }
